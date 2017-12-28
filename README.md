@@ -9,6 +9,8 @@ This is a *demo* project to showcase how to use [TestCafe](https://github.com/De
 - [Brackets](http://brackets.io/) (Free)
 - [WebStorm](https://www.jetbrains.com/webstorm/) (Paid, with subscriptions)
 
+I used VS Code for this project, but you can use whichever you prefer. In case you also chose VS Code, [here](https://marketplace.visualstudio.com/search?term=testcafe&target=VSCode&category=All%20categories&sortBy=Relevance) are some helpful Extensions you may want to use.
+
 ## Why use TestCafe over Selenium?
 
 - Never have to care about waiting for an element on the page to load.
