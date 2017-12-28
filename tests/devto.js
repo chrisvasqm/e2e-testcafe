@@ -1,17 +1,16 @@
-import { Selector } from 'testcafe';
+import HomePage from '../page/homepage';
+import AboutPage from '../page/aboutpage';
+
+const homePage = new HomePage();
+const aboutPage = new AboutPage();
 
 fixture("dev.to tests")
     .page("http://dev.to");
 
 test("Check founders names in About page", async (t) => {
-    const aboutLink = Selector('a').withText('About');
-    const firstFounderName = Selector('b').withText('Ben Halpern');
-    const secondFounderName = Selector('b').withText('Jess Lee');
-    const thirdFounderName = Selector('b').withText('Peter Frank');
-
     await t
-        .click(aboutLink)
-        .expect(firstFounderName.exists).ok()
-        .expect(secondFounderName.exists).ok()
-        .expect(thirdFounderName.exists).ok();
+        .click(homePage.linkAbout)
+        .expect(aboutPage.titleBenHalpern.exists).ok()
+        .expect(aboutPage.titleJessLee.exists).ok()
+        .expect(aboutPage.titlePeterFrank.exists).ok();
 });
