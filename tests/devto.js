@@ -9,10 +9,9 @@ test("Check founders names in About page", async (t) => {
     const secondFounderName = Selector('b').withText('Jess Lee');
     const thirdFounderName = Selector('b').withText('Peter Frank');
 
-    await t // set the window size to it's max size
-        .maximizeWindow()
+    await t
         .click(aboutLink)
         .expect(firstFounderName.exists).ok()
         .expect(secondFounderName.exists).ok()
-        .expect(thirdFounderName.exists).ok()
+        .expect(thirdFounderName.exists).ok();
 });
