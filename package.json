@@ -1,0 +1,29 @@
+{
+  "name": "e2e-testcafe",
+  "version": "1.0.0",
+  "description": "This is a *demo* project to showcase how to use [TestCafe](https://github.com/DevExpress/testcafe) for End-To-End testing.",
+  "main": "tests/devto.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npm install testcafe"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisvasqm/e2e-testcafe.git"
+  },
+  "keywords": [
+    "e2e",
+    "testcafe"
+  ],
+  "author": "chrisvasqm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisvasqm/e2e-testcafe/issues"
+  },
+  "homepage": "https://github.com/chrisvasqm/e2e-testcafe#readme",
+  "devDependencies": {
+    "testcafe": "^0.18.6"
+  }
+}
