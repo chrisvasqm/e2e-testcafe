@@ -7,10 +7,17 @@ const aboutPage = new AboutPage();
 fixture("dev.to tests")
     .page("http://dev.to");
 
-test("Check founders names in About page", async (t) => {
-    await t
-        .click(homePage.linkAbout)
-        .expect(aboutPage.titleBenHalpern.exists).ok()
-        .expect(aboutPage.titleJessLee.exists).ok()
-        .expect(aboutPage.titlePeterFrank.exists).ok();
-});
+    test("Check founders names in About page", async (t) => {
+        await t
+            .click(homePage.linkAbout)
+            .expect(aboutPage.titleBenHalpern.exists).ok()
+            .expect(aboutPage.titleJessLee.exists).ok()
+            .expect(aboutPage.titlePeterFrank.exists).ok();
+    });
+
+    test("Search for posts", async (t) => {
+        await t
+            .typeText(homePage.searchBar, "test")
+            .pressKey('enter')
+            .expect(homePage.articles.length > 0);
+    });
