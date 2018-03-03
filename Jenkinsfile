@@ -18,6 +18,11 @@ pipeline {
             sh 'testcafe chrome tests/devto.js'
           }
         }
+        stage('Firefox tests') {
+          steps {
+            sh 'testcafe firefox tests/devto.js'
+          }
+        }
       }
     }
   }
