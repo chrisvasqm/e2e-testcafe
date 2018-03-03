@@ -7,8 +7,17 @@ pipeline {
       }
     }
     stage('Tests') {
-      steps {
-        echo 'Starting TestCafe tests...'
+      parallel {
+        stage('Tests') {
+          steps {
+            echo 'Starting TestCafe tests...'
+          }
+        }
+        stage('Chrome tests') {
+          steps {
+            sh 'testcafe chrome tests/devto.js'
+          }
+        }
       }
     }
   }
