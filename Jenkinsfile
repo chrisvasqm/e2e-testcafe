@@ -6,9 +6,9 @@ pipeline {
         echo 'Add Jenkinsfile'
       }
     }
-    stage('Chrome tests') {
+    stage('Browsers tests') {
       steps {
-        sh 'testcafe chrome tests/devto.js'
+        sh 'testcafe chrome,firefox,safari tests/devto.js'
       }
     }
   }
