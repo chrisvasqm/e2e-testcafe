@@ -6,5 +6,10 @@ pipeline {
         echo 'Add Jenkinsfile'
       }
     }
+    stage('Tests') {
+      steps {
+        echo 'Starting TestCafe tests...'
+      }
+    }
   }
 }
